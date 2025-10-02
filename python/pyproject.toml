@@ -1,0 +1,45 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "estat-api-wrapper"
+version = "0.0.1"
+description = "政府統計の総合窓口(e-Stat) API v3.0の非公式Pythonラッパーライブラリ"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Surpris", email = "take90-it09-easy27@outlook.jp" }]
+requires-python = ">=3.9"
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = ["requests>=2.20.0"]
+
+[project.optional-dependencies]
+dev = ["autopep8", "flake8", "jupyter", "jupyterlab", "pylint"]
+
+# プロジェクト関連のURL: GitHubリポジトリなど、ご自身のURLに書き換えてください
+[project.urls]
+"Homepage" = "https://github.com/Surpris/estat-api-wrapper"
+"Bug Tracker" = "https://github.com/Surpris/estat-api-wrapper/issues"
+"Documentation" = "https://github.com/Surpris/estat-api-wrapper#readme"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["estat_api", "estat_api/src/**/*"]
+exclude = ["tests"]
