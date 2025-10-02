@@ -40,6 +40,5 @@ dev = ["autopep8", "flake8", "jupyter", "jupyterlab", "pylint"]
 "Documentation" = "https://github.com/Surpris/estat-api-wrapper#readme"
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["estat_api", "estat_api/src/**/*"]
+# where = ["."]
 exclude = ["tests"]
